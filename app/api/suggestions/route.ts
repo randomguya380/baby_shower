@@ -3,7 +3,7 @@ import {
   readSuggestions,
   appendSuggestion,
   nameExists,
-} from '@/lib/kvHandler'
+} from '@/lib/tursoHandler'
 
 export async function GET() {
   try {

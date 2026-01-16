@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { updateVoteCount } from '@/lib/kvHandler'
+import { updateVoteCount } from '@/lib/tursoHandler'
 
 export async function POST(request: NextRequest) {
   try {
