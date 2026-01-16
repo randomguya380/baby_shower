@@ -3,11 +3,11 @@ import {
   readSuggestions,
   appendSuggestion,
   nameExists,
-} from '@/lib/csvHandler'
+} from '@/lib/kvHandler'
 
 export async function GET() {
   try {
-    const suggestions = readSuggestions()
+    const suggestions = await readSuggestions()
     return NextResponse.json({ suggestions }, { status: 200 })
   } catch (error) {
     console.error('Error reading suggestions:', error)
@@ -32,15 +32,15 @@ export async function POST(request: NextRequest) {
     }
 
     // Check for duplicate (case-insensitive)
-    if (nameExists(babyName)) {
+    if (await nameExists(babyName)) {
       return NextResponse.json(
         { error: 'This name has already been suggested' },
         { status: 409 }
       )
     }
 
-    // Append to CSV
-    appendSuggestion({
+    // Append to KV
+    await appendSuggestion({
       userName: userName.trim(),
       babyName: babyName.trim(),
       meaning: meaning.trim(),

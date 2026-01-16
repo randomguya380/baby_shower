@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { updateVoteCount } from '@/lib/csvHandler'
+import { updateVoteCount } from '@/lib/kvHandler'
 
 export async function POST(request: NextRequest) {
   try {
@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const newVoteCount = updateVoteCount(babyName)
+    const newVoteCount = await updateVoteCount(babyName)
 
     if (newVoteCount === null) {
       return NextResponse.json(
