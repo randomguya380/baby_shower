@@ -7,8 +7,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 // Default placeholder images - user can replace these
 const defaultImages = [
-  '/images/invite.jpg',
-  '/images/couple1.jpg',
+  '/images/invite.jpeg',
+  '/images/couple1.jpeg',
   '/images/couple2.jpg',
 ]
 
