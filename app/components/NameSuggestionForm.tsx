@@ -25,8 +25,8 @@ export default function NameSuggestionForm() {
       return
     }
 
-    if (!userName.trim() || !babyName.trim() || !meaning.trim()) {
-      setError('All fields are required')
+    if (!userName.trim() || !babyName.trim()) {
+      setError('Your name and baby name are required')
       return
     }
 
@@ -189,7 +189,7 @@ export default function NameSuggestionForm() {
                 htmlFor="meaning"
                 className={`block text-sm font-medium mb-2 ${colors.text}`}
               >
-                Meaning of Name
+                Meaning of Name <span className="text-gray-400 text-xs">(Optional)</span>
               </label>
               <textarea
                 id="meaning"

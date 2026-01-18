@@ -13,21 +13,21 @@ export default function EventDetails() {
             <div className="text-center">
               <h3 className="text-2xl font-serif text-gray-700 mb-2">Venue</h3>
               <p className="text-lg text-gray-600">
-                [Add your venue address here]
+              Shri Mahalakshmi Temple, Narayanpur, Dharwad
               </p>
             </div>
             
             <div className="text-center">
               <h3 className="text-2xl font-serif text-gray-700 mb-2">Date</h3>
               <p className="text-lg text-gray-600">
-                [Add your event date here]
+              Sunday, 25th January 2026
               </p>
             </div>
             
             <div className="text-center">
               <h3 className="text-2xl font-serif text-gray-700 mb-2">Time</h3>
               <p className="text-lg text-gray-600">
-                [Add your event time here]
+              11:00 AM Onwards
               </p>
             </div>
           </div>

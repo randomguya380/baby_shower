@@ -144,9 +144,11 @@ export default function NameList() {
                       {suggestion.babyName}
                     </h3>
                   </div>
-                  <p className="text-gray-600 mb-2">
-                    <span className="font-medium">Meaning:</span> {suggestion.meaning}
-                  </p>
+                  {suggestion.meaning && (
+                    <p className="text-gray-600 mb-2">
+                      <span className="font-medium">Meaning:</span> {suggestion.meaning}
+                    </p>
+                  )}
                   <p className="text-sm text-gray-500">
                     Suggested by {suggestion.userName}
                   </p>

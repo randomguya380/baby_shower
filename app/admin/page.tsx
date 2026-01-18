@@ -264,7 +264,7 @@ export default function AdminDashboard() {
                         {suggestion.babyName}
                       </td>
                       <td className="py-4 px-4 text-gray-600">
-                        {suggestion.meaning}
+                        {suggestion.meaning || <span className="text-gray-400 italic">No meaning provided</span>}
                       </td>
                       <td className="py-4 px-4 text-gray-700">
                         {suggestion.voteCount}

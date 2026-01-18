@@ -24,9 +24,9 @@ export async function POST(request: NextRequest) {
     const { userName, babyName, meaning } = body
 
     // Validation
-    if (!userName || !babyName || !meaning) {
+    if (!userName || !babyName) {
       return NextResponse.json(
-        { error: 'All fields are required' },
+        { error: 'User name and baby name are required' },
         { status: 400 }
       )
     }
@@ -39,11 +39,11 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Append to KV
+    // Append to Turso (meaning is optional)
     await appendSuggestion({
       userName: userName.trim(),
       babyName: babyName.trim(),
-      meaning: meaning.trim(),
+      meaning: meaning ? meaning.trim() : '',
     })
 
     return NextResponse.json(
