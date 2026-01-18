@@ -60,18 +60,21 @@ export default function HeroCarousel() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="absolute inset-0 w-full h-full"
+          className="absolute inset-0 w-full h-full flex items-center justify-center"
         >
           <Image
             src={images[currentIndex]}
             alt={`Slide ${currentIndex + 1}`}
-            fill
+            width={1920}
+            height={1080}
             sizes="100vw"
             quality={90}
-            className="object-cover object-center"
+            className="w-full h-full object-contain"
             priority={currentIndex === 0}
             style={{
-              objectFit: 'cover',
+              maxWidth: '100%',
+              maxHeight: '100%',
+              objectFit: 'contain',
               objectPosition: 'center',
             }}
             onError={(e) => {
